@@ -2107,33 +2107,37 @@ fun SentinelProfileScreen(
                     }
                 }
             }
-        }
-
         
-            Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
-            Button(
-                onClick = onLogout,
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFFD6D6)),
-                shape = RoundedCornerShape(16.dp),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(52.dp)
-            ) {
-                Icon(
-                    imageVector = Icons.AutoMirrored.Filled.Logout,
-                    contentDescription = null,
-                    tint = SentinelRiskRed
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = "Sair da conta",
-                    color = SentinelRiskRed,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-        }
-    }
+                    Button(
+                        onClick = onLogout,
+                        shape = RoundedCornerShape(16.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color.White
+                        ),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(52.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.Logout,
+                            contentDescription = null,
+                            tint = SentinelRiskRed
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "Sair da conta",
+                            color = SentinelRiskRed,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(32.dp))
+                }
+            } 
+        } 
+        
 
 @Composable
 private fun SentinelPermissaoItem(
